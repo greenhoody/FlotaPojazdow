@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace FlotaPojazdów.Infrastructure.DTO
 {
-    internal class VehicleDTO
+    public class VehicleDTO
     {
         public int Id { get; set; }
         public string Vin { get; set; }
