@@ -5,6 +5,8 @@ VisualStudioVersion = 17.0.32014.148
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlotaPojazdów.Core", "FlotaPojazdów.Core\FlotaPojazdów.Core.csproj", "{E443FD0F-EE2F-49CD-BE9F-1529DFB99AF9}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlotaPojazdów.Infrastructure", "FlotaPojazdów.Infrastructure\FlotaPojazdów.Infrastructure.csproj", "{12334133-EE8A-4B8E-858B-9673C147E070}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{E443FD0F-EE2F-49CD-BE9F-1529DFB99AF9}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E443FD0F-EE2F-49CD-BE9F-1529DFB99AF9}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E443FD0F-EE2F-49CD-BE9F-1529DFB99AF9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12334133-EE8A-4B8E-858B-9673C147E070}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12334133-EE8A-4B8E-858B-9673C147E070}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12334133-EE8A-4B8E-858B-9673C147E070}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12334133-EE8A-4B8E-858B-9673C147E070}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
