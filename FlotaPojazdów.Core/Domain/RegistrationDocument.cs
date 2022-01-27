@@ -9,7 +9,6 @@ namespace FlotaPojazdów.Core.Domain
     public class RegistrationDocument
     {
         public int Id { get; set; }
-        public Vehicle Vehicle { get; set; }
         public DateTime DateOfIssue { get; set; }
         public DateTime ExpireDate { get; set; }
         public DateTime FirstRegistration { get; set; }

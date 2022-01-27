@@ -8,7 +8,7 @@ using FlotaPojazdów.Core.Domain;
 
 namespace FlotaPojazdów.Core.Repositories
 {
-    public interface IRegistraionDocumentRepository
+    public interface IRegistrationDocumentRepository
     {
         Task<IEnumerable<RegistrationDocument>> GetAllAsync();
         Task<RegistrationDocument> GetAsync(int id);

@@ -56,8 +56,8 @@ namespace FlotaPojazdów.Infrastructure.Repositories
                 var d = _appDbContext.Driver.FirstOrDefault(x => x.Id == driver.Id);
                 d.Name = driver.Name;
                 d.Surname = driver.Surname;
-                d.DriverLicenceCategory = driver.DriverLicenceCategory;
-                d.DriverLicenceNumber = driver.DriverLicenceNumber;
+                d.LicenceCategory = driver.LicenceCategory;
+                d.LicenceNumber = driver.LicenceNumber;
                 _appDbContext.SaveChanges();
             }
             catch(Exception ex)

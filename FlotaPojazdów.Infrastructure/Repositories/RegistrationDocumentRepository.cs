@@ -8,7 +8,7 @@ using FlotaPojazdów.Core.Repositories;
 
 namespace FlotaPojazdów.Infrastructure.Repositories
 {
-    public class RegistrationDocumentRepository : IRegistraionDocumentRepository
+    public class RegistrationDocumentRepository : IRegistrationDocumentRepository
     {
         private AppDbContext _appDbContext;
 
@@ -54,7 +54,6 @@ namespace FlotaPojazdów.Infrastructure.Repositories
             try
             {
                 var d = _appDbContext.RegistrationDocument.FirstOrDefault(x => x.Id == rd.Id);
-                d.Vehicle = rd.Vehicle;
                 d.DateOfIssue = rd.DateOfIssue;
                 d.ExpireDate = rd.ExpireDate;
                 d.FirstRegistration = rd.FirstRegistration;
