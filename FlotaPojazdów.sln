@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlotaPojazdów.Infrastructu
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlotaPojazdów.WebApi", "FlotaPojazdów.WebApi\FlotaPojazdów.WebApi.csproj", "{76069CB9-3DC4-4A4F-9755-8DFCCE87DDED}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlotaPojazdów.WebApp", "FlotaPojazdów.WebApp\FlotaPojazdów.WebApp.csproj", "{6534EA95-F4E7-4BB6-8599-86D5AD81CAE5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{76069CB9-3DC4-4A4F-9755-8DFCCE87DDED}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{76069CB9-3DC4-4A4F-9755-8DFCCE87DDED}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{76069CB9-3DC4-4A4F-9755-8DFCCE87DDED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6534EA95-F4E7-4BB6-8599-86D5AD81CAE5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6534EA95-F4E7-4BB6-8599-86D5AD81CAE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6534EA95-F4E7-4BB6-8599-86D5AD81CAE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6534EA95-F4E7-4BB6-8599-86D5AD81CAE5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
