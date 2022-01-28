@@ -5,12 +5,16 @@ using Microsoft.EntityFrameworkCore;
 
 namespace FlotaPojazdów.Infrastructure.Repositories
 {
-    public class AppDbContext:IdentityDbContext<IdentityUser>
+    public class AppDbContext: IdentityDbContext<IdentityUser>
     {
         public DbSet<Driver> Driver { get; set; }
         public DbSet<Transit> Transit { get; set; }
         public DbSet<TransitDriver> TransitDriver { get; set; }
         public DbSet<RegistrationDocument> RegistrationDocument { get; set; }
         public DbSet<Vehicle> Vehicle { get; set; }
+        public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+        {
+
+        }
     }
 }

@@ -11,6 +11,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
+using FlotaPojazdów.WebApp.Models;
 
 namespace FlotaPojazdów.WebApp.Controllers
 {
@@ -33,15 +34,48 @@ namespace FlotaPojazdów.WebApp.Controllers
             string cn = ControllerContext.RouteData.Values["controller"].ToString();
             return cn;
         }
+        private string GenerateJSONWebToken()
+        {
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes("SuperTajneHaslo111222"));
+            var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
+
+            var claims = new[]
+            {
+                new Claim("Name", "Tomasz"),
+                new Claim(JwtRegisteredClaimNames.Email, "       "),
+            };
+
+            var token = new JwtSecurityToken(
+                issuer: "http://www.tomaszles.pl",
+                audience: "http://www.tomaszles.pl",
+                expires: DateTime.Now.AddHours(3),
+                claims: claims
+                );
+
+            return new JwtSecurityTokenHandler().WriteToken(token);
+        }
 
         // GET: DriverController
-        public ActionResult Index()
+        public async Task<IActionResult> Index()
         {
-            return View();
+            var tokenString = GenerateJSONWebToken();
+            string _restpath = GetHostUrl().Content + CN();
+            List<DriverVM> drivers = new List<DriverVM>();
+
+            using (var httpClient = new HttpClient())
+            {
+                httpClient.DefaultRequestHeaders.Authorization = new System.Net.Http.Headers.AuthenticationHeaderValue("Bearer", tokenString);
+                using (var response = await httpClient.GetAsync(_restpath))
+                {
+                    string apiResponse = await response.Content.ReadAsStringAsync();
+                    drivers = JsonConvert.DeserializeObject<List<DriverVM>>(apiResponse);
+                }
+            }
+            return View(drivers);
         }
 
         // GET: DriverController/Details/5
-        public ActionResult Details(int id)
+        public async Task<IActionResult> Details(int id)
         {
             return View();
         }
