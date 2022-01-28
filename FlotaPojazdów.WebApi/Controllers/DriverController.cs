@@ -57,6 +57,11 @@ namespace FlotaPojazdów.WebApi.Controllers
             await _driverService.EditDriver(d, id);
             return Ok();
         }
-
+        [HttpDelete("{id}")]
+        public async Task<IActionResult> DeleteDriver(int id)
+        {
+            await _driverService.DeleteDriver(id);
+            return Ok();
+        }
     }
 }
