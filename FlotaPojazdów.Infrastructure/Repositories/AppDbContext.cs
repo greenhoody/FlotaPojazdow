@@ -3,12 +3,6 @@ using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using FlotaPojazdów.Core.Domain;
 using Microsoft.EntityFrameworkCore;
 
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
 namespace FlotaPojazdów.Infrastructure.Repositories
 {
     public class AppDbContext:IdentityDbContext<IdentityUser>
