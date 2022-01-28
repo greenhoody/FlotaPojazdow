@@ -9,7 +9,7 @@ using FlotaPojazdów.Core.Domain;
 
 namespace FlotaPojazdów.Infrastructure.Services
 {
-    public class TransitDriverService:ITransitTransitDriverService
+    public class TransitDriverService:ITransitDriverService
     {
         private readonly ITransitDriverRepository _transitDriverRepository;
         private readonly IDriverRepository _driverRepository;

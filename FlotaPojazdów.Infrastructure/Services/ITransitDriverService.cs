@@ -7,7 +7,7 @@ using FlotaPojazdów.Infrastructure.DTO;
 
 namespace FlotaPojazdów.Infrastructure.Services
 {
-    public interface ITransitTransitDriverService
+    public interface ITransitDriverService
     {
         public Task<IEnumerable<TransitDriverDTO>> BrowseAll();
         public Task<TransitDriverDTO> GetTransitDriver(int id);

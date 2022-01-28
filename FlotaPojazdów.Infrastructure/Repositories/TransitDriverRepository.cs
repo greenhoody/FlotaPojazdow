@@ -78,4 +78,5 @@ namespace FlotaPojazdów.Infrastructure.Repositories
                 await Task.FromException(ex);
             }
         }
+    }
 }
